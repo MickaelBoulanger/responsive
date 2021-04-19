@@ -16,7 +16,7 @@ body,html{
 }
                                 
 /* je met un mediaquery pour que l'image passe a 50% a partir de 1024px et je cible le parent des deux bloc de texte
-pour lui mettre un display flex et je mets les 2 texts a 50% */
+pour lui mettre un display flex et je mets les 2 blocs a 50% */
 @media (min-width : 1024px) {
     #responsive{ 
         height: 50%;
