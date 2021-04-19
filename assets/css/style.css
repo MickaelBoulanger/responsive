@@ -5,14 +5,29 @@
 }
 body,html{
     height:100%;
+    margin: 0;
 }
 
 @media (orientation: landscape) {
-   #responsive{ background-image: url(/assets/img/coworking-paysage.jpeg);
+   
+#responsive{ background-image: url(/assets/img/coworking-paysage.jpeg);
         
 
 }}
-  
+
+@media (min-width : 1024px) {
+
+#responsive { 
+        height: 50%;
+
+}}
+
+
+
+
+
+
+
 
 
 
