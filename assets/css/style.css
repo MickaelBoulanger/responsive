@@ -2,45 +2,60 @@ body,html{
     height:100%;
     margin: 0;
 }
+/* je cible le responsive pour lui mettre une hauteur de 100%,un background d'image et une taille a l'image */
 #responsive{
     height:100%;
     background-image: url(/assets/img/coworking-portrait.jpeg);
     background-size: cover;
 }
-
-#bloc{
-    display: flex;
-    flex-direction: column;
-}
-
-#text1{
-    width: 100%;
-}
-#text2{
-    width: 100%;
-}
-
-                                /* ex1 */
-
-
+/* je met un mediaquery pour que des qu'on passe en mode paysage ca change d'image */
 @media (orientation: landscape) {
-   
-    #responsive{ background-image: url(/assets/img/coworking-paysage.jpeg);
-        
-
-}}
-                                /* ex2 */
+    #responsive{
+        background-image: url(/assets/img/coworking-paysage.jpeg);
+    }
+}
+                                
+/* je met un mediaquery pour que l'image passe a 50% a partir de 1024px */
 @media (min-width : 1024px) {
-
-    #responsive { height: 50%;
+    #responsive{ 
+        height: 50%;
     
-}}
-                                /* ex3 */
-@media (min-width : 1024px) {
+    }
+    #bloc{
+        display: flex;
+    }
+    #text1,#text2{
+        width: 50%;
+    }
+}
+ /*je cible le footer pour lui donner un fond rouge ainsi qu'une couleur de texte ainsi que l'alignement*/
+footer{
+    background-color: crimson;
+    color:whitesmoke;
+    font-weight: bold;
+    text-align: center;
 
-    #bloc{ flex-direction: row;
+}
+/* je cible l'enfant du footer qui est ul pour lui donnez un padding de 0 ainsi utiliser list style type pour enlever 
+les points */
+footer>ul{
+    list-style-type: none;
+    padding: 0;
+    
 
-}}
+}
+/* je cible l'enfant du footer qui est ul pour qua partir de 576 px ma liste sera partager en espaces egal */
+@media (min-width : 576px) {
+    footer>ul{
+        display: flex;
+        justify-content: space-evenly;
+        
+    }
+
+}
+
+
+
 
 
 
